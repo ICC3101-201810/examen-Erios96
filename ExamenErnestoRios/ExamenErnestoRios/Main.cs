@@ -15,8 +15,9 @@ namespace ExamenErnestoRios
         {
 
         }
-        public bool GuardarUsuario(string nombre)
+        public void GuardarUsuario(string nombre)
         {
+            Usuario u1 = new Usuario(nombre);
             bool x = true;
             foreach(Usuario u in usuarios)
             {
@@ -24,12 +25,12 @@ namespace ExamenErnestoRios
                 {
                     x = false;
                 }
+
             }
             if(x)
             {
-                Usuario u1 = new Usuario(nombre);
+                usuarios.Add(u1);
             }
-            return x;
         }
 
     }

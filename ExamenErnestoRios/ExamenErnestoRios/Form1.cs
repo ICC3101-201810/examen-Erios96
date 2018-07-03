@@ -155,19 +155,14 @@ namespace ExamenErnestoRios
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //No se por que textbox y el boton no me dejan usar las flechas para juagar
+            //Pero si se elimian estas herramientas las teclas si funcionan y el pacman se mueve
             string usuario = textBox1.Text;
-            if (main.GuardarUsuario(usuario))
-            {
-                panel1.Hide();
-                panel1.Invalidate();
-                textBox1.Hide();
-                button1.Hide();
-                timer1.Start();
-            }
-            else
-            {
-                label1.Text = "El nombre de usuario ya existe";
-            }
+            panel1.Hide();
+            textBox1.Hide();
+            button1.Hide();
+            timer1.Start();
+            
         }
     }
 }
